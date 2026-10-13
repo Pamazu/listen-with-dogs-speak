@@ -1,231 +1,201 @@
 ---
 name: consistent-character-images
-description: Make still images of the SAME character (a dog or any animal first, a person too) in new scenes, outfits, moods and styles, on any image model or platform (Seedream, Nano Banana, GPT Image, Higgsfield Soul 2.0, our own platform) WITHOUT needing a trained identity such as Soul ID. Covers the reference-photo set, character sheets, the identity-lock prompt block, scene prompts, expressions as body language, surgical edits, variants, style keys and the check after each render. Use whenever a recurring character must look like itself across images, when a Soul 2.0-style shoot is wanted on a platform without Soul, when preparing start frames for video, or when a generated character drifted.
+description: Write IMAGE-generation prompts that produce reference sheets (one image per character, animal, group, prop or location, saved as @char_x / @loc_x / @prop_x) to attach later to a VIDEO model so every clip keeps the same characters. Dogs and other animals first, people too; works on any image model or platform (Seedream, Nano Banana, GPT Image, Higgsfield Soul 2.0, our own platform), no Soul ID needed. Use when a video project needs its character, prop or location references made, when a Soul 2.0-style character reference is wanted on any platform, or when a reference sheet came back inconsistent. Output is image prompts only, never a video prompt or a story scene (that is timed-video-prompts, which uses these sheets).
 ---
 
-# Consistent character images
+# Consistent character images: reference sheets for video
 
-The job a trained-identity model does (Higgsfield's Soul ID + Soul 2.0, a LoRA, a platform
-"character"): the same character, recognisable in every new image. This skill does that job with
-what every modern image model accepts, reference images plus a fixed text block, so it runs on any
-platform and on our own. A trained identity is an optional extra (section 9), never a requirement.
+This skill turns a brief or script into **one image-generation prompt per asset**. Each prompt makes a
+reference sheet: the same character shown in a few clean views on a plain studio background, or an
+empty location, or a prop from several sides. The saved sheets are attached to a video model later,
+named by their handles (`@char_biscuit`, `@loc_kitchen`, `@prop_ball`), and the video prompt
+(`timed-video-prompts`) refers to them.
 
-It is written animal-first, because our work is mostly dogs. Each block has a person variant.
+## 0. What this skill produces, and what it never produces
 
-Write every generation prompt in English; talk to J in his language.
+**Produces:** a list of assets, and for each asset one block in this format:
 
-## 0. Rules that always hold
-
-- **Identity comes from three things, every time**: the reference photos, the identity-lock block
-  (section 3) pasted unchanged, and a check of the result (section 7). Leave out one and the
-  character drifts.
-- **One file per character is the source of truth**: its reference photos and its identity text live
-  in one folder (in a project repo: `characters/<name>/`). Prompts copy from it; nobody edits identity
-  inside a single prompt.
-- **Name every reference in the first line** of the prompt (section 4). Models that see four
-  unlabelled images guess which one is the dog.
-- **One prompt per variant.** When variants must differ (concept, expression, camera), write one
-  prompt each and keep references and settings fixed. A "make 4" count gives paraphrases, not choices.
-- **Write what you want, not what you fear**: "tack sharp" instead of "no blur", "an empty street"
-  instead of "no people". Negatives only as a short tail.
-- **Check the price first** where the platform allows (Magnific `simulate_cost`); draft cheap, final
-  once.
-- **Never** a real public figure, a trademarked or branded character, or a real person's face without
-  their consent.
-
-## 1. The reference photo set
-
-The photos ARE the identity. Spend time here; it is cheaper than any number of retries.
-
-**How many:** 8-12 is the sweet spot, 5 the minimum. A prompt can take only the model's reference
-limit (Seedream 5 Pro: up to 10; Seedance 2.5 video: up to 30), so keep a **core set of 4-6** for
-prompts and the full set for training or for picking.
-
-**Each photo:** one animal only, sharp, eyes visible, at least 1024 px on the short side, no filters,
-no heavy compression.
-
-**Variety (this is what makes it work):**
-- **Angles:** front, three-quarter left, three-quarter right, both profiles, slightly from above and
-  from below.
-- **Both sides of the body.** Markings are rarely symmetrical; a patch on the left flank must be seen
-  on the left.
-- **Distances:** head, head and shoulders, full body standing, sitting, lying down.
-- **Mouth:** closed, open and relaxed, panting, and one mid-bark or "talking" if the character will
-  speak in video.
-- **Light:** indoor and outdoor, soft and hard.
-
-**Dog details the set must show clearly:** coat colour, length and texture; every marking and its
-side; eye colour (and heterochromia); nose colour; ear set and carriage (up, folded, one of each);
-muzzle length; tail shape and carriage; paws and their colour; size against something known; the
-collar and tag if it is part of the look.
-
-**Avoid:** other animals or people in frame, costumes, hats or bandanas the character does not
-normally wear, a fresh grooming cut unless that is the canonical look, motion blur, the same pose
-repeated.
-
-**Date the set.** Puppies change month to month and coats change with seasons; when the real dog
-changes, make a new set and say which clips used which.
-
-**For a person:** the same, minus coat and tail: clear face, no sunglasses or hats over the face,
-neutral, smiling and talking expressions, head shot to full body, no group photos, no heavy make-up
-they do not normally wear.
-
-## 2. The character sheet (when photos are not enough or the character is invented)
-
-Make one sheet, approve it once, then cut it into separate files that become the character's
-reference images. Never regenerate it per scene.
-
+````
+@char_biscuit: dog reference sheet
+Model: an image model that accepts reference images (on Magnific: Seedream 5 Pro) · 16:9 · 2k
+Attach: biscuit_photo_1.jpg … biscuit_photo_4.jpg   (real dog only; "none" for an invented one)
+Save as: characters/biscuit/char_biscuit.png
+Prompt:
 ```
-Character reference sheet of ONE dog, <identity text from section 3>. Five views of the same dog
-side by side on a plain light-grey studio background, identical soft even lighting in every view:
-front view sitting, three-quarter view standing, left profile standing, right profile standing,
-close-up of the face with the mouth slightly open. Same scale in every view, whole body visible,
-tack sharp, photographic. No text, no labels, no props.
+<the image prompt, from the templates in section 3>
 ```
+````
 
-- **From real photos:** attach the best 4-6 photos and add a first line naming them (section 4) and
-  "match this exact dog".
-- **Invented dog:** describe it with the identity text; generate several sheets and let J pick one.
-- **Illustrated or mascot dog:** add the style descriptor (section 8) and end with "illustrated, not a
-  photo".
-- Use the image model `best-model-per-job` names for character sheets; Seedream 5 Pro and Nano Banana
-  are the candidates (character reference type on Magnific), UNTESTED against each other for dogs.
+**Never produces:** a video prompt, a shot list, camera moves, dialogue, sound, or a picture of the
+characters acting in the story. Those belong to `timed-video-prompts`, which takes these sheets as its
+references. If asked for a scene, make the sheets first and hand over to that skill.
 
-## 3. The identity-lock block
+Write every prompt in English; talk to J in his language.
 
-Written once per character, in its folder, pasted unchanged into every prompt.
+## 1. Make the asset list first
 
-**Animal:**
+Read the brief or script and list everything that must look the same from clip to clip:
+
+| Kind | Handle | One sheet shows |
+|---|---|---|
+| Person | `@char_<name>` | face close-up + full body front + full body back |
+| Animal | `@char_<name>` | face close-up + both full-body profiles (or a sitting three-quarter view) |
+| Talking animal, extra | `@char_<name>_mouth` | face close-up with mouth closed, half open, wide open |
+| Group (a band, a team) | `@char_<group>` | every member, full body, side by side, facing camera |
+| Prop | `@prop_<name>` | front + back + three-quarter |
+| Location | `@loc_<name>` | one wide empty view from the first shot's camera angle |
+
+Handles are lowercase with underscores, the same as the saved file name. One sheet per handle; a
+character who changes clothes gets a second handle (`@char_mika_coat`).
+
+## 2. Where identity comes from
+
+- **A real animal or person:** attach 4-6 of the best photos (section 5) and say "the dog in the
+  attached photos" in the prompt. The photos lead; the text confirms.
+- **Invented:** the identity text below carries everything. Generate 2-4 sheets and let J pick one;
+  from then on that sheet IS the character, never regenerated per clip.
+
+**Identity text**, written once per character and pasted unchanged into its sheet prompt:
+
+- **Animal:** `<Name> is a <size> <breed or mix> with a <coat colour, length, texture> coat,
+  <each marking and which side it is on>, <eye colour> eyes, <ear set>, a <nose colour> nose,
+  <tail shape>, and <collar and tag>.`
+- **Person:** `<Name> is a <age range> <build> person with <skin tone>, <face shape, eye shape,
+  nose, lips>, <hair colour, length, texture, style>, wearing <every garment with colour and fit,
+  shoes, glasses, jewellery>.`
+
+## 3. Sheet prompt templates
+
+All sheets: one photograph, **16:9**, plain seamless light-grey studio background, soft even light,
+identical in every panel, nothing else in frame, no text. The panels must show the SAME character:
+say so, and name the detail most likely to drift (a marking's side, glasses, a logo).
+
+**Animal (dog, cat, any pet):**
 ```
-CHARACTER 1: <Name>, the dog in reference images 1-4. IDENTITY LOCK: reproduce this exact dog,
-a photographic identity match: <breed or mix>, <size and build>, <head and muzzle shape>,
-<eye colour and shape>, <ear set and carriage>, <nose colour>, <coat colour, length and texture>,
-<each marking and its side>, <tail shape and carriage>, <collar and tag>. Do not turn it into a
-generic or "average" dog of the breed, do not beautify, re-colour or restyle it. Real dog anatomy:
-four legs, paws, a dog's mouth and teeth.
+Animal reference sheet for an AI video: one photograph divided into three equal vertical panels
+side by side, separated by thin straight gaps, all on the same seamless light-grey studio background
+with soft, even, shadowless studio light, identical in every panel.
+Panel 1 (left): close-up of <Name>'s head and shoulders, face straight on, eyes open and looking into
+the lens, mouth closed, ears relaxed.
+Panel 2 (centre): the same <animal>, full body standing in left profile, the whole body, legs, paws
+and tail inside the frame.
+Panel 3 (right): the same <animal>, full body standing in right profile, the whole body, legs, paws
+and tail inside the frame.
+<identity text>
+The exact same <animal> in all three panels: identical coat colour, <the drift-prone detail>, the same
+collar and the same size. Photorealistic, tack-sharp fur detail. No text, no labels, no props, no
+other animals or people.
 ```
+Both profiles because markings are rarely symmetrical. If the animal's markings are the same on both
+sides, panel 3 may be "sitting, three-quarter view" instead (as in a cat sheet).
+
+**Talking animal, mouth sheet** (helps lip sync): three face close-ups straight on, same light and
+background: "mouth closed", "mouth half open as if mid-word, tongue visible", "mouth wide open as if
+barking". Real animal mouth and teeth, no human lips.
 
 **Person:**
 ```
-CHARACTER 1: <Name>, the person in reference images 1-3. IDENTITY LOCK: reproduce this exact person
-with a photographic identity match: same bone structure, eye shape, nose, lips, jawline, skin tone,
-hairline and hair texture. Do not beautify, average or restyle the face.
+Character reference sheet for an AI video: one photograph divided into three vertical panels side by
+side, all on the same seamless light-grey studio background with soft, even studio light, identical in
+every panel.
+Panel 1 (left, widest): head-and-shoulders close-up of <Name>, facing the camera, <neutral / light
+smile>.
+Panel 2 (centre): the same person, full body from head to shoes, facing the camera, standing straight,
+arms relaxed at the sides.
+Panel 3 (right): the same person, full body seen from behind, the same stance.
+<identity text, including the full outfit>
+The same person, outfit and scale in all three panels. Photorealistic, tack sharp, natural skin
+texture. No text, no labels, no props, nobody else.
 ```
 
-Up to three characters per image is the practical limit; each gets its own numbered block.
+**Group:**
+```
+Reference photo of <the group> for an AI video, 16:9: all <N> members standing side by side in one row,
+full body from head to shoes, facing the camera, evenly spaced, nobody overlapping, <setting: plain
+light-grey studio, or the scene's location if they only ever appear there>, soft even light.
+From left to right: <member 1: build, face, hair, outfit, what they hold>; <member 2: ...>; ...
+Everyone fully visible. Photorealistic, tack sharp. No text, no labels, nobody else.
+```
 
-## 4. The scene prompt (the Soul 2.0-style still)
+**Prop:**
+```
+Product reference sheet for an AI video: one photograph divided into three panels side by side, the
+same seamless light-grey studio background and soft even light in each.
+Panel 1: <the prop> from the front. Panel 2: the same <prop> from the back. Panel 3: the same <prop> in
+a three-quarter view.
+<exact shape, size, colours, materials, finish, any markings or our own logo>.
+The identical object in all three panels. Photorealistic, tack sharp. No text except <the prop's own
+printed text, spelled exactly>, no hands, nothing else.
+```
 
-Assemble in this order. The fixed blocks (manifest, identity, style) are pasted unchanged; the
-scene part stays short, because long free text makes models drift.
+**Location:**
+```
+Location reference photo for an AI video, 16:9: <the place>, seen from <the camera position and height
+of the first shot>, <lens, e.g. 24mm wide>. <Time of day and light.> Dressed exactly as the scene
+needs: <furniture, the number of chairs and place settings, key objects and where they stand>.
+Completely empty of people and animals. Photorealistic, rich natural colour, tack sharp. No text.
+```
 
-1. **Reference manifest**, first line whenever two or more images are attached:
-   `IMAGE REFERENCES: images 1-4 = BISCUIT (dog); image 5 = the kitchen; image 6 = style only.`
-   On platforms that use handles, the handle names do this job (`@biscuit_front`).
-2. **Format:** "<aspect>, single photograph" (or the illustration style).
-3. **Scene:** one clear moment: who, doing what, where. One sentence or two.
-4. **Characters:** the identity-lock block(s), then the expression (section 5) and pose.
-5. **Key elements:** only props that matter to the moment.
-6. **Location:** place, time of day, weather. For an existing place, a location reference image.
-7. **Composition:** where the character sits in frame (a third, centred), how large, camera height.
-   For dogs, camera at the dog's eye level unless the shot is about looking down at it.
-8. **Light:** direction and quality ("soft window light from the left, warm rim on the fur").
-9. **Look / grade:** the style descriptor (section 8) or a short photographic look ("clean editorial
-   photograph, 50mm, shallow depth of field, rich natural colour").
-10. **Text:** "No text, no watermark" unless text is wanted.
+## 4. Check every sheet before saving it
 
-**Editorial and social looks** (what Soul 2.0 is known for): pick one and keep it for a series:
-candid phone photo (natural light, slight grain, eye-level, imperfect framing); clean editorial
-(studio or styled set, controlled light, magazine framing); cinematic still (wide lens, motivated
-light, film-like colour); lifestyle (a real home or street, the character mid-action).
+- **Same character in every panel.** The most common failure is a slightly different animal or face in
+  one panel: compare markings, the side they are on, eye colour, ears, collar, glasses, outfit.
+- **Matches the photos** (real subject) or the identity text (invented).
+- **Clean sheet:** plain grey background, whole body in the full-body panels, nothing cropped, no
+  props, no extra people or animals, no text or labels.
+- **Anatomy:** four legs and one tail; paws, not hands; the right number of fingers on a person.
 
-**Locations without the character:** make empty location plates separately ("an empty sunlit
-kitchen, morning, nobody in frame"), approve them, then use them as location references. The place
-then stays the same across a series.
+On a failure, generate again with the same prompt at most twice. Then fix it:
+- **One panel wrong:** a surgical edit with the sheet as the only input: "Change ONLY panel 3 so the
+  dog matches panels 1 and 2: <the detail>. Keep everything else exactly unchanged."
+- **Panels keep disagreeing:** generate panel 1 alone, approve it, then generate each other view with
+  panel 1 attached as the reference, and join the panels side by side (`ffmpeg -i a.png -i b.png -i
+  c.png -filter_complex hstack=3 sheet.png`).
 
-## 5. Expressions are body language
+If you cannot look at the image, say so instead of passing it.
 
-Models render "a sad dog" or "a happy dog" as stock. Describe the body instead:
+## 5. Photos of a real animal (the input for section 2)
 
-| Wanted | Write |
-|---|---|
-| Happy | soft eyes, mouth open and relaxed, tongue slightly out, ears loose, tail mid-wag |
-| Alert | ears forward, mouth closed, head up, weight forward, eyes on one point |
-| Curious | head tilted to one side, ears up, mouth closed |
-| Sorry / guilty | head low, ears back, eyes looking up, tail low |
-| Excited | play bow, front legs down, rear up, tail high, mouth open |
-| Calm | lying down, eyes half-closed, chin on paws |
-| Proud | sitting tall, chest out, head up, mouth closed |
-| Suspicious | head slightly turned, eyes to the side, mouth closed |
-| Talking | mouth mid-word, jaw half open, eyes on the listener |
+8-12 photos, at least 5; keep the best 4-6 for attaching. Each: only this animal, sharp, eyes visible,
+at least 1024 px, no filters. Cover: front, both three-quarters, both profiles (markings differ by
+side), head, full body standing, sitting and lying, mouth closed and open (and mid-bark if it will
+talk), indoor and outdoor light. Avoid costumes the animal does not normally wear, motion blur, other
+animals, the same pose twice. Date the set; puppies and coats change. For a person: the same, with the
+face clear, no sunglasses or hats over it, no group photos.
 
-For a person: name the emotion and one physical cue ("shock: eyebrows up, mouth open").
+## 6. Illustrated or mascot characters
 
-## 6. Edits and variants
+Add one style line to every sheet prompt ("hand-painted storybook gouache, soft textures, warm muted
+palette, visible brush strokes, illustrated, not a photo") and, once a sheet is approved, attach it as
+the style reference for the other sheets: "Take only the render style and colour of the style image;
+never copy its characters, text or objects." Keep the same panel layout.
 
-- **With a reference image, describe the change, not the image again.** "Make it a snowy evening" beats
-  re-describing the whole dog.
-- **Surgical edit** (one thing changes, everything else stays), with the picked image as the only
-  input:
-  ```
-  Change ONLY <the expression to: ears back, head tilted / the background to: a park at dusk>.
-  Keep the dog's identity, coat, markings, pose, collar, framing, lighting and everything else
-  exactly unchanged.
-  ```
-  One scope per edit: expression, background, background colour, light colour, an outfit or
-  accessory. Each accepted edit becomes the source for the next one. Never regenerate the whole
-  image for a small change.
-- **Variants:** same references and settings, one line different (expression, camera height, time of
-  day). Name each variant by what differs ("curious / low angle").
+## 7. Trained identities (optional)
 
-## 7. Check every result before showing it
+Soul ID, a LoRA or a platform "character" can be trained from the same photos once a character recurs a
+lot. Higgsfield's Soul ID is documented for people's faces; whether it holds a dog is UNTESTED. Use one
+only if a side-by-side test against the sheet method shows it wins.
 
-- The character matches the references: markings on the right side, eye and nose colour, ears, tail,
-  collar.
-- Anatomy: four legs, one tail, paws (not hands), the right number of toes and teeth showing.
-- No stray text, logos or watermark; any wanted text spelled exactly.
-- The expression reads at thumbnail size.
+## 8. Where to run it now
 
-On a failure, retry the same prompt at most twice; after that, change the prompt (more references,
-a shorter scene, a firmer identity line) or the model. If you cannot look at the image, say so
-instead of passing it.
+- **Magnific:** `images_generate`, `mode: seedream-5-pro` (the catalog's default for character
+  consistency; 100 credits for one 16:9 2k sheet on 2026-10-13), real photos as `references` of type
+  `image`. Nano Banana Pro for the highest fidelity on a final sheet. Check `simulate_cost` first.
+- **Higgsfield, Dreamina, our own platform, a raw API:** the same prompts; only how photos are attached
+  changes.
+- Which model keeps a dog most consistent is UNTESTED: run the same sheet on the candidates and record
+  the winner in `0_Global/reference/best-model-per-job.md`.
 
-## 8. Illustrated and mascot characters
-
-- **Style descriptor:** one line describing render style, palette, line and finish, pasted into every
-  prompt. End illustrated styles with "illustrated, not a photo".
-- **Style key:** one approved image that shows the style, attached to every prompt as a style
-  reference. With a style reference, say: "Take only the render style and colour of the style image;
-  never copy its characters, text or objects."
-- **Mascot key:** `<style>. Full-body character: <Name>, a <breed> narrator, expressive, clear
-  readable silhouette, looking at camera, centred, simple background. Recurring-character design.
-  No text.` Approve it, then it is the mascot's reference image.
-
-## 9. Trained identities (optional)
-
-Soul ID, a LoRA, or a platform "character" can sharpen identity once a character recurs a lot.
-Higgsfield's Soul ID is documented for people's faces (5-20 face photos); whether it holds a dog is
-UNTESTED. Use one only where the platform is already in use and a side-by-side test against the
-reference-image method (same prompts, same scenes) shows it wins. The photo set from section 1 is
-what any of them trains on, so it is never wasted.
-
-## 10. Where to run it now
-
-- **Magnific (J's account):** `images_generate` with `references` of type `character` (identity),
-  `image` (location), `style` (style key). Models listing `character_consistency`: Seedream 5 Pro
-  (the catalog's default), Nano Banana Pro (fidelity on finals); Nano Banana 2 Lite for cheap drafts.
-- **Higgsfield:** the same blocks work in Soul 2.0, Seedream or Nano Banana prompts; add a Soul ID only
-  per section 9.
-- **Dreamina, our own platform, a raw API:** the same blocks; only how images are attached changes.
-- Which model wins for dogs is UNTESTED: run the same 3 scenes on the candidates and record the winner
-  in `0_Global/reference/best-model-per-job.md`.
-
-For video of the same character, the approved stills become start frames or references in
-`timed-video-prompts`.
+**Tested 2026-10-13:** the animal template above on Seedream 5 Pro (invented golden retriever, no
+photos), one generation. Layout, coat, collar and the side of the blaze held; the head read slightly
+narrower in the profiles than in the close-up, which the check in section 4 catches. Result:
+`examples/char_biscuit_test.jpg`.
 
 ## Files
 
-- `references/sources.md`: which Higgsfield skills this draws on, what was taken, what was left, and
-  their licence.
+- `examples/talking-dog-assets.md`: a complete answer from this skill (dog sheet, mouth sheet,
+  location), in the exact output format of section 0.
+- `examples/char_biscuit_test.jpg`: what the animal template produced on Seedream 5 Pro.
+- `references/sources.md`: which Higgsfield skills this draws on, and what was taken and left.
 - `sources/higgsfield-ai-skills/`: the eight original Higgsfield skills, unmodified, for comparison.
   Not loaded as skills.

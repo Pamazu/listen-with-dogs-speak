@@ -18,10 +18,10 @@ the transferable craft is smaller than the repo.
 
 | Higgsfield skill | Verdict | Taken |
 |---|---|---|
-| `higgsfield-soul-id` | Useful | The photo guide (count, angles, light, expressions, distances, what to avoid) → section 1, rewritten for dogs. |
-| `higgsfield-generate` | Useful in parts | Job → model routing (character sheets, cartoon characters, empty locations, cinematic stills) → sections 2, 4, 10 as jobs, not model names. Prompt basics: describe the change on image-to-image, describe motion on image-to-video, positive phrasing, short prompts → sections 0, 6 and `timed-video-prompts`. Media roles (start, end, reference, audio) → `timed-video-prompts`. |
-| `higgsfield-youtube-thumbnail` | Most useful | The identity-lock block, the reference manifest line, the ordered prompt contract, the surgical-edit prompt, one prompt per variant, the post-render check → sections 3, 4, 6, 7. The 16 thumbnail frameworks are kept for a later thumbnail skill. |
-| `higgsfield-video-explainer` | Useful | Style descriptor + one style-key image on every generation, the mascot key, and "generate every voice take first, then the clips" → section 8 and `timed-video-prompts`. |
+| `higgsfield-soul-id` | Useful | The photo guide (count, angles, light, expressions, distances, what to avoid) → the photo rules, rewritten for dogs. |
+| `higgsfield-generate` | Useful in parts | Job → model routing (character sheets, cartoon characters, empty locations, cinematic stills) → the sheet types and where to run them, as jobs, not model names. Prompt basics: describe the change on image-to-image, describe motion on image-to-video, positive phrasing, short prompts → the fix path for a bad sheet and `timed-video-prompts`. Media roles (start, end, reference, audio) → `timed-video-prompts`. |
+| `higgsfield-youtube-thumbnail` | Most useful | The identity-lock block, the reference manifest line, the ordered prompt contract, the surgical-edit prompt, one prompt per variant, the post-render check → the identity text, the check and the surgical fix. The 16 thumbnail frameworks are kept for a later thumbnail skill. |
+| `higgsfield-video-explainer` | Useful | Style descriptor + one style-key image on every generation, the mascot key, and "generate every voice take first, then the clips" → illustrated sheets and `timed-video-prompts`. |
 | `higgsfield-product-photoshoot` | Partly | The short labelled-options interview and the shoot modes (studio, lifestyle, close-up, pin, banner, carousel, ad pack, try-on, conceptual, restyle) are a good menu for pet-product shoots later; its prompts are server-side, nothing else to take. |
 | `higgsfield-marketplace-cards` | Not now | Routing only; templates are server-side. |
 | `higgsfield-brandkit` | Not for this | Brand systems and logos are covered by the designer craft and its logo standard. |

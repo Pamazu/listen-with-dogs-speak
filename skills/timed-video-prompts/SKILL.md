@@ -34,7 +34,9 @@ Chat with J in his language; write every generation prompt in English unless ask
 
 1. **Collect**: script and lines with times, the asset files, aspect, duration, target model and
    platform, budget.
-2. **Lock identity** for each character (section 3) before writing any shot.
+2. **Lock identity** for each character (section 3) before writing any shot: make the reference sheets
+   (`@char_*`, `@prop_*`, `@loc_*`) with `consistent-character-images` and attach them as the clip's
+   references.
 3. **Write the spec.** Shots contiguous, each with its camera, who is in frame, `BACKGROUND`, timed
    action and lines.
 4. **Check, then render** with `clip_spec.py`. Fix every error it prints.
@@ -83,7 +85,7 @@ Use the highest rung available; stack rungs, they add up.
    eyes, ears/hair, clothing or collar, one personality line), pasted word for word into every prompt
    from one file. Changing it means changing the file, never one prompt.
 4. **A start frame** when one shot must match exactly: generate the first frame as a still with the
-   references (`consistent-character-images`), approve it, then animate it. On Seedance a start frame
+   reference sheets from `consistent-character-images` attached, approve it, then animate it. On Seedance a start frame
    and reference images exclude each other: start frame for one tightly held shot, references for
    multi-shot clips. **With a start frame, the prompt describes the motion, not the picture**: the
    model already has the frame, so spend the words on camera move, action, lines and sound, and keep
