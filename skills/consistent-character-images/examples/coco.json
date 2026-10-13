@@ -1,0 +1,26 @@
+{
+  "name": "Coco",
+  "handle": "coco",
+  "kind": "animal",
+  "species": "dog",
+  "tone": "light",
+  "references": [],
+  "identity": "Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag.",
+  "drift": "the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim",
+  "views": [
+    "front",
+    "back",
+    "left",
+    "right",
+    "three_quarter_left"
+  ],
+  "expressions": [
+    "neutral",
+    "happy",
+    "sad",
+    "angry",
+    "surprised",
+    "curious",
+    "talking"
+  ]
+}

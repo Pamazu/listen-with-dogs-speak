@@ -34,8 +34,8 @@ Chat with J in his language; write every generation prompt in English unless ask
 
 1. **Collect**: script and lines with times, the asset files, aspect, duration, target model and
    platform, budget.
-2. **Lock identity** for each character (section 3) before writing any shot: make the reference sheets
-   (`@char_*`, `@prop_*`, `@loc_*`) with `consistent-character-images` and attach them as the clip's
+2. **Lock identity** for each character (section 3) before writing any shot: make each character's view and
+   expression images with `consistent-character-images` and attach the ones each shot needs as the clip's
    references.
 3. **Write the spec.** Shots contiguous, each with its camera, who is in frame, `BACKGROUND`, timed
    action and lines.
@@ -77,15 +77,14 @@ Use the highest rung available; stack rungs, they add up.
 1. **Real photos as references.** For a real person or animal, 4-6 sharp photos: front, three-quarter,
    profile, full body, and one with the mouth open if it will speak. Plain light, no filters. These
    beat any trained ID for animals, which most trained-ID features are not built for.
-2. **A generated reference sheet** for an invented character: make a turnaround (front, three-quarter,
-   profile, full body, mouth open), approve it once, save the views as files. From then on they are the
-   character's photos; never regenerate them per clip. The photo-set rules, the sheet prompt and the
-   identity-lock block are in `consistent-character-images` (sections 1-3).
+2. **Generated view images** for an invented character: an anchor image (front, neutral), then every
+   view and expression from it, with `consistent-character-images`. Approve them once; from then on
+   they are the character's photos, never regenerated per clip.
 3. **The identity text**, one paragraph per character (species/build, colouring, markings and where,
    eyes, ears/hair, clothing or collar, one personality line), pasted word for word into every prompt
    from one file. Changing it means changing the file, never one prompt.
 4. **A start frame** when one shot must match exactly: generate the first frame as a still with the
-   reference sheets from `consistent-character-images` attached, approve it, then animate it. On Seedance a start frame
+   character's view images from `consistent-character-images` attached, approve it, then animate it. On Seedance a start frame
    and reference images exclude each other: start frame for one tightly held shot, references for
    multi-shot clips. **With a start frame, the prompt describes the motion, not the picture**: the
    model already has the frame, so spend the words on camera move, action, lines and sound, and keep
@@ -204,8 +203,8 @@ the audio in the edit as the safe fallback.
 - `sources/higgsfield-timed-prompts/SKILL.md`: the original skill J supplied, unmodified, kept for
   comparison. Not loaded as a skill.
 
-For illustrated or mascot characters (a style descriptor and one style-key image on every clip), see
-`consistent-character-images` section 8.
+For illustrated or mascot characters, add one style line (render style, palette, finish, "illustrated,
+not a photo") to every prompt and attach one approved style image to every clip.
 
 Adapted from `higgsfield-timed-prompts` (a skill J supplied on 2026-10-13; author and licence
 unknown). This rewritten version is ours and may be shared; the verbatim original in `sources/` stays

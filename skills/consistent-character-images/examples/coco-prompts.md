@@ -1,0 +1,250 @@
+# Coco: 35 view prompts
+
+Imaginary character: generate prompt 1 first, approve it, then attach it to every other prompt.
+Use the same model and settings for all of them (16:9 or 1:1, 2k).
+
+## 1. coco_front_neutral.png  (anchor: generate first)
+Attach: nothing
+
+```
+Reference image of Coco for an AI video: one dog, seen straight from the front, facing the camera, body square to the camera, head level. Neutral, relaxed: mouth closed, ears in their natural resting position, eyes calm and open, tail relaxed. Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours exactly as described. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 2. coco_back_neutral.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, seen straight from behind, the back of the head and the back toward the camera. Neutral, relaxed: mouth closed, ears in their natural resting position, eyes calm and open, tail relaxed; seen from behind, the mood shows in the ears, tail and posture. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 3. coco_left_neutral.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, in left profile: side-on, the dog's left side toward the camera, head pointing to the left of the frame. Neutral, relaxed: mouth closed, ears in their natural resting position, eyes calm and open, tail relaxed. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 4. coco_right_neutral.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, in right profile: side-on, the dog's right side toward the camera, head pointing to the right of the frame. Neutral, relaxed: mouth closed, ears in their natural resting position, eyes calm and open, tail relaxed. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 5. coco_three_quarter_left_neutral.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, in a three-quarter view from the front-left: body turned about 45 degrees so the face and the dog's left side are both visible, head toward the left of the frame and the body extending back toward the right of the frame. Neutral, relaxed: mouth closed, ears in their natural resting position, eyes calm and open, tail relaxed. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 6. coco_front_happy.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, seen straight from the front, facing the camera, body square to the camera, head level. Happy: soft eyes, mouth open and relaxed with the tongue slightly out, ears relaxed, tail up mid-wag. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 7. coco_back_happy.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, seen straight from behind, the back of the head and the back toward the camera. Happy: soft eyes, mouth open and relaxed with the tongue slightly out, ears relaxed, tail up mid-wag; seen from behind, the mood shows in the ears, tail and posture. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 8. coco_left_happy.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, in left profile: side-on, the dog's left side toward the camera, head pointing to the left of the frame. Happy: soft eyes, mouth open and relaxed with the tongue slightly out, ears relaxed, tail up mid-wag. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 9. coco_right_happy.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, in right profile: side-on, the dog's right side toward the camera, head pointing to the right of the frame. Happy: soft eyes, mouth open and relaxed with the tongue slightly out, ears relaxed, tail up mid-wag. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 10. coco_three_quarter_left_happy.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, in a three-quarter view from the front-left: body turned about 45 degrees so the face and the dog's left side are both visible, head toward the left of the frame and the body extending back toward the right of the frame. Happy: soft eyes, mouth open and relaxed with the tongue slightly out, ears relaxed, tail up mid-wag. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 11. coco_front_sad.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, seen straight from the front, facing the camera, body square to the camera, head level. Clearly sad and dejected: head hanging low below the shoulders, ears drooping flat back against the head, eyes looking up mournfully from under the brow, mouth closed, tail hanging down between the hind legs, shoulders slumped. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 12. coco_back_sad.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, seen straight from behind, the back of the head and the back toward the camera. Clearly sad and dejected: head hanging low below the shoulders, ears drooping flat back against the head, eyes looking up mournfully from under the brow, mouth closed, tail hanging down between the hind legs, shoulders slumped; seen from behind, the mood shows in the ears, tail and posture. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 13. coco_left_sad.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, in left profile: side-on, the dog's left side toward the camera, head pointing to the left of the frame. Clearly sad and dejected: head hanging low below the shoulders, ears drooping flat back against the head, eyes looking up mournfully from under the brow, mouth closed, tail hanging down between the hind legs, shoulders slumped. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 14. coco_right_sad.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, in right profile: side-on, the dog's right side toward the camera, head pointing to the right of the frame. Clearly sad and dejected: head hanging low below the shoulders, ears drooping flat back against the head, eyes looking up mournfully from under the brow, mouth closed, tail hanging down between the hind legs, shoulders slumped. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 15. coco_three_quarter_left_sad.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, in a three-quarter view from the front-left: body turned about 45 degrees so the face and the dog's left side are both visible, head toward the left of the frame and the body extending back toward the right of the frame. Clearly sad and dejected: head hanging low below the shoulders, ears drooping flat back against the head, eyes looking up mournfully from under the brow, mouth closed, tail hanging down between the hind legs, shoulders slumped. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 16. coco_front_angry.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, seen straight from the front, facing the camera, body square to the camera, head level. Angry: muzzle wrinkled, lips pulled back showing the front teeth, hard stare, ears pinned, body stiff and leaning forward, tail stiff. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 17. coco_back_angry.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, seen straight from behind, the back of the head and the back toward the camera. Angry: muzzle wrinkled, lips pulled back showing the front teeth, hard stare, ears pinned, body stiff and leaning forward, tail stiff; seen from behind, the mood shows in the ears, tail and posture. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 18. coco_left_angry.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, in left profile: side-on, the dog's left side toward the camera, head pointing to the left of the frame. Angry: muzzle wrinkled, lips pulled back showing the front teeth, hard stare, ears pinned, body stiff and leaning forward, tail stiff. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 19. coco_right_angry.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, in right profile: side-on, the dog's right side toward the camera, head pointing to the right of the frame. Angry: muzzle wrinkled, lips pulled back showing the front teeth, hard stare, ears pinned, body stiff and leaning forward, tail stiff. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 20. coco_three_quarter_left_angry.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, in a three-quarter view from the front-left: body turned about 45 degrees so the face and the dog's left side are both visible, head toward the left of the frame and the body extending back toward the right of the frame. Angry: muzzle wrinkled, lips pulled back showing the front teeth, hard stare, ears pinned, body stiff and leaning forward, tail stiff. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 21. coco_front_surprised.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, seen straight from the front, facing the camera, body square to the camera, head level. Surprised: eyes wide, ears fully up and forward, mouth slightly open, head pulled back a little. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 22. coco_back_surprised.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, seen straight from behind, the back of the head and the back toward the camera. Surprised: eyes wide, ears fully up and forward, mouth slightly open, head pulled back a little; seen from behind, the mood shows in the ears, tail and posture. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 23. coco_left_surprised.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, in left profile: side-on, the dog's left side toward the camera, head pointing to the left of the frame. Surprised: eyes wide, ears fully up and forward, mouth slightly open, head pulled back a little. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 24. coco_right_surprised.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, in right profile: side-on, the dog's right side toward the camera, head pointing to the right of the frame. Surprised: eyes wide, ears fully up and forward, mouth slightly open, head pulled back a little. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 25. coco_three_quarter_left_surprised.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, in a three-quarter view from the front-left: body turned about 45 degrees so the face and the dog's left side are both visible, head toward the left of the frame and the body extending back toward the right of the frame. Surprised: eyes wide, ears fully up and forward, mouth slightly open, head pulled back a little. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 26. coco_front_curious.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, seen straight from the front, facing the camera, body square to the camera, head level. Curious: head tilted to one side, ears up and forward, mouth closed, eyes bright. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 27. coco_back_curious.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, seen straight from behind, the back of the head and the back toward the camera. Curious: head tilted to one side, ears up and forward, mouth closed, eyes bright; seen from behind, the mood shows in the ears, tail and posture. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 28. coco_left_curious.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, in left profile: side-on, the dog's left side toward the camera, head pointing to the left of the frame. Curious: head tilted to one side, ears up and forward, mouth closed, eyes bright. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 29. coco_right_curious.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, in right profile: side-on, the dog's right side toward the camera, head pointing to the right of the frame. Curious: head tilted to one side, ears up and forward, mouth closed, eyes bright. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 30. coco_three_quarter_left_curious.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, in a three-quarter view from the front-left: body turned about 45 degrees so the face and the dog's left side are both visible, head toward the left of the frame and the body extending back toward the right of the frame. Curious: head tilted to one side, ears up and forward, mouth closed, eyes bright. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 31. coco_front_talking.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, seen straight from the front, facing the camera, body square to the camera, head level. Talking: mouth half open as if in the middle of a word, tongue visible, ears forward, eyes on the listener; a real animal's mouth and teeth, no human lips. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 32. coco_back_talking.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, seen straight from behind, the back of the head and the back toward the camera. Talking: mouth half open as if in the middle of a word, tongue visible, ears forward, eyes on the listener; a real animal's mouth and teeth, no human lips; seen from behind, the mood shows in the ears, tail and posture. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 33. coco_left_talking.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, in left profile: side-on, the dog's left side toward the camera, head pointing to the left of the frame. Talking: mouth half open as if in the middle of a word, tongue visible, ears forward, eyes on the listener; a real animal's mouth and teeth, no human lips. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 34. coco_right_talking.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, in right profile: side-on, the dog's right side toward the camera, head pointing to the right of the frame. Talking: mouth half open as if in the middle of a word, tongue visible, ears forward, eyes on the listener; a real animal's mouth and teeth, no human lips. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
+## 35. coco_three_quarter_left_talking.png
+Attach: coco_front_neutral.png
+
+```
+Reference image of Coco for an AI video: one dog, in a three-quarter view from the front-left: body turned about 45 degrees so the face and the dog's left side are both visible, head toward the left of the frame and the body extending back toward the right of the frame. Talking: mouth half open as if in the middle of a word, tongue visible, ears forward, eyes on the listener; a real animal's mouth and teeth, no human lips. The dog in the attached anchor image (coco_front_neutral), reproduced exactly, every detail the same: Coco is a small adult Bichon Frisé mix with a fluffy, curly, bright white coat trimmed round on the head, a soft apricot patch on the left ear only, round dark brown eyes, a black nose, drop ears covered in curls, a long plumed tail, and a thin mint-green collar with a small silver heart tag. Keep exactly: the apricot patch on the LEFT ear only, the mint-green collar with the silver heart tag, the round head trim. Full body, the whole dog inside the frame with clear space around it, on a plain seamless mid-dark slate-grey studio backdrop: plain, evenly lit, no texture, objects or gradients. Soft even studio light with a gentle rim light, so the dog stands out with strong, clean contrast against the background. Camera at the dog's eye level, 85mm lens, no distortion. Photorealistic, tack-sharp fur detail, colours true to the reference. Only this one dog; no text, no labels, no props, nobody else.
+```
+
