@@ -1,0 +1,6 @@
+.DS_Store
+.env
+.env.*
+# Every render stays local except the takes we keep
+renders/*
+!renders/selects/
