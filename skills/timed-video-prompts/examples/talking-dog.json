@@ -1,0 +1,30 @@
+{
+  "title": "Biscuit asks for the walk",
+  "duration": 8,
+  "aspect": "9:16",
+  "resolution": "Draft",
+  "logline": "8-second vertical clip: a dog in a kitchen looks straight at camera and asks, very politely, for its walk; one push-in, no cuts.",
+  "assets": [
+    {"handle": "biscuit_front", "file": "characters/biscuit/biscuit_front.png", "kind": "character", "role": "the dog Biscuit, face straight on. Take the face, coat, markings and collar exactly.", "ignore": "the photo background and lighting."},
+    {"handle": "biscuit_side", "file": "characters/biscuit/biscuit_side.png", "kind": "character", "role": "Biscuit in profile, for the body shape and tail."},
+    {"handle": "loc_kitchen", "file": "locations/loc_kitchen.png", "kind": "location", "role": "the kitchen. Its camera angle is the angle of the first frame.", "ignore": "any people in the photo."}
+  ],
+  "look": "Clean modern digital look, 35mm, warm morning light from the window at screen-right, deep clean blacks, colour rich and saturated, never washed out.",
+  "characters": [
+    {"name": "Biscuit", "assets": ["biscuit_front", "biscuit_side"], "identity": "Biscuit is a medium-sized golden retriever with a wavy honey-gold coat, a paler cream chest, dark brown eyes, soft floppy ears and a red leather collar with a round brass tag.", "voice": "Speaks in a warm, slightly husky, very polite voice, unhurried.", "rule": "Sits the whole time; only the head and mouth move."}
+  ],
+  "positions": [
+    {"location": "loc_kitchen", "layout": "In @loc_kitchen Biscuit sits on the tiled floor at screen-centre, facing camera, in front of the kitchen door.", "behind": {"Biscuit": "the closed white kitchen door with a lead hanging on its hook."}}
+  ],
+  "shots": [
+    {"start": 0, "end": 8, "camera": "THE VERY FIRST FRAME IS this: camera at dog eye level, 35mm, Biscuit full body at screen-centre, exactly the angle of @loc_kitchen. A slow, steady push-in to a close-up of the face that never stops for the line.", "frame": "Biscuit sits facing camera, eyes open, ears relaxed.", "background": "the closed white kitchen door with the lead on its hook directly behind Biscuit; the window light at screen-right.", "action": "0.5s Biscuit glances up at the lead, then back to camera.", "lines": [{"start": 1.5, "end": 4.5, "who": "Biscuit", "text": "Excuse me. It is exactly walk o'clock.", "delivery": "looking straight into the lens, polite, a little pleased with itself"}], "cut": "4.5–8s Biscuit holds eye contact, tail sweeping the floor once; the push-in eases to a stop by 7.5s. No cut."}
+  ],
+  "sound": {"music": "No music.", "ambience": "Quiet kitchen: a fridge hum, a clock ticking, birds faintly through the window.", "voice": "Clean, close, dry studio dialogue recording; the microphone never appears."},
+  "keep": [
+    "Biscuit looks exactly like @biscuit_front and @biscuit_side in every frame: same coat, cream chest, red collar, brass tag.",
+    "The mouth moves naturally with the words: a real dog's jaw and tongue, no human lips or teeth.",
+    "Eyes open for the whole clip.",
+    "Biscuit stays seated at screen-centre; the camera move never stops for the line.",
+    "No subtitles, no on-screen text."
+  ]
+}

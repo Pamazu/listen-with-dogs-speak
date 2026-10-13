@@ -19,6 +19,11 @@ the locations, the exact prompt that was run, the voice lines, and the takes we 
 5. **Takes.** The takes we keep go in `renders/selects/`. Everything else in `renders/` stays
    local and is not committed.
 
+## Skills
+
+`skills/` has the two methods we follow: keeping each dog consistent in images, and writing timed
+video prompts. See [`skills/README.md`](skills/README.md).
+
 ## Naming
 
 Files are named the way the prompt refers to them, so `@dog_name` in a prompt means
