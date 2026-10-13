@@ -9,11 +9,21 @@ never inside a single prompt.
 
 ## Reference images in this folder
 
+The photos are the dog's identity, so they are worth getting right. Aim for 8-12, at least 5.
+Mark the best 4-6 as the core set that goes into prompts.
+
 - `<name>_front.png`: face straight on, mouth closed
-- `<name>_three_quarter.png`
-- `<name>_side.png`: profile
-- `<name>_full.png`: whole body, standing
-- `<name>_mouth_open.png`: mouth open, as if speaking (optional, helps lip movement)
+- `<name>_three_quarter_left.png` and `<name>_three_quarter_right.png`
+- `<name>_side_left.png` and `<name>_side_right.png`: both profiles, because markings are rarely
+  the same on both sides
+- `<name>_full_standing.png`, `<name>_sitting.png`, `<name>_lying.png`
+- `<name>_mouth_open.png`: relaxed or panting, and one mid-bark if the dog will talk
+
+Each photo: only this dog in frame, sharp, eyes visible, at least 1024 px, no filters. Mix indoor
+and outdoor light. Leave out costumes, hats and bandanas the dog does not normally wear, motion blur
+and the same pose twice. Write the date the photos were taken here, so we know which look a clip used.
+
+Photos taken: <date>
 
 ## Voice
 
