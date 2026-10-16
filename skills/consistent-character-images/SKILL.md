@@ -114,6 +114,10 @@ ears, tail and posture.
 - **It is the same character as the references:** each drift detail, markings on the correct side, eye
   and nose colour, ears, collar and tag, outfit.
 - **The view is the one asked for:** left profile shows the left side with the head to frame left.
+  Check the side with something asymmetric (a watch, a marking, a parting): reference photos taken
+  from one angle pull the opposite view to that angle. On 2026-10-16 every "three-quarter right" of a
+  person came out as his left side, the angle of two of his photos; the three-quarter views now name
+  which shoulder is nearest the camera, as the profiles name where the head points.
 - **The expression reads**, and anatomy is right: four legs, one tail, paws not hands, correct teeth.
 - **Clean:** plain backdrop, whole body in frame, nothing else, no text.
 

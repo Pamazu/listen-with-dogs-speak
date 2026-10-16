@@ -20,8 +20,8 @@ VIEWS = {
     "back": "seen straight from behind, the back of the head and the back toward the camera",
     "left": "in left profile: side-on, the {s}'s left side toward the camera, head pointing to the left of the frame",
     "right": "in right profile: side-on, the {s}'s right side toward the camera, head pointing to the right of the frame",
-    "three_quarter_left": "in a three-quarter view from the front-left: body turned about 45 degrees so the face and the {s}'s left side are both visible, head toward the left of the frame and the body extending back toward the right of the frame",
-    "three_quarter_right": "in a three-quarter view from the front-right: body turned about 45 degrees so the face and the {s}'s right side are both visible, head toward the right of the frame and the body extending back toward the left of the frame",
+    "three_quarter_left": "in a three-quarter view from the front-left: body turned about 45 degrees so the face and the {s}'s left side are both visible, head toward the left of the frame and the body extending back toward the right of the frame, the {s}'s left shoulder nearest the camera and the right shoulder turned away",
+    "three_quarter_right": "in a three-quarter view from the front-right: body turned about 45 degrees so the face and the {s}'s right side are both visible, head toward the right of the frame and the body extending back toward the left of the frame, the {s}'s right shoulder nearest the camera and the left shoulder turned away",
     "face": "close-up of the face and neck, seen straight from the front, looking into the lens",
 }
 DEFAULT_VIEWS = ["front", "back", "left", "right", "three_quarter_left"]
