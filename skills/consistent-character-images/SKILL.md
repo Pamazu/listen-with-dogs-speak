@@ -117,7 +117,8 @@ ears, tail and posture.
   Check the side with something asymmetric (a watch, a marking, a parting): reference photos taken
   from one angle pull the opposite view to that angle. On 2026-10-16 every "three-quarter right" of a
   person came out as his left side, the angle of two of his photos; the three-quarter views now name
-  which shoulder is nearest the camera, as the profiles name where the head points.
+  which shoulder is nearest the camera, as the profiles name where the head points. Judge which side
+  is NEAREST, not whether the far side is hidden: at three-quarter the far arm and wrist still show.
 - **The expression reads**, and anatomy is right: four legs, one tail, paws not hands, correct teeth.
 - **Clean:** plain backdrop, whole body in frame, nothing else, no text.
 
