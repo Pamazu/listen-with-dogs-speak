@@ -28,6 +28,11 @@ photo and write down precisely what is there; never invent a detail the photos d
   and which side it is on, eye colour, ear set, nose colour, tail shape and length (not its position: where the ears and tail sit belongs to the expression), collar and tag.
 - **Person:** face shape, eyes, nose, lips, skin tone, hair colour, length, texture and style, build,
   and every garment, shoe and accessory with its colour.
+- **Name materials and measures, not impressions:** glasses by frame material, colour and thickness
+  ("clear transparent plastic, medium thickness", never "light gold/clear"), a beard by length and
+  where it is denser ("a few millimetres, denser on the chin"). A close-up renders the words literally:
+  in a 2026-10-16 test, "a light gold/clear metal frame" put gold wire glasses on every close-up of a
+  person whose frames are clear plastic.
 - **Object:** shape, size, colours, materials, finish, printed marks.
 
 Pick the 4-6 best photos to attach to every prompt. Good photos: only this subject, sharp, eyes visible,
@@ -64,6 +69,9 @@ prompt. From then on the anchor is the character's reference photo.
   body-language description.
 
 `examples/coco.json` is a complete one.
+
+**A person's set:** the neutral views at full body (outfit and build), every expression waist-up or
+as a face close-up (at full body a face is about 60 px tall, too small to check or to reference).
 
 ## 3. Generate the prompts
 
