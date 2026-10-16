@@ -57,6 +57,8 @@ prompt. From then on the anchor is the character's reference photo.
 - `tone`: the subject's main colour, `light`, `mid` or `dark`. It picks a plain backdrop that contrasts
   with it: light subject on mid-dark slate grey, mid on light cool grey, dark on light warm grey.
 - `references`: empty for an imaginary character.
+- `framing`: `full_body` (default for animals and objects), `waist_up` (default for people, whose faces
+  are too small to judge at full body) or `head_shoulders`. The `face` view is always a close-up.
 - Extra views: `three_quarter_right`, `face` (a close-up, useful for expressions and lip sync).
 - Extra expressions: `scared`, `excited`, `sleepy`; anything else goes in `custom_expressions` with its
   body-language description.
@@ -77,7 +79,8 @@ change the character file and run it again. `examples/coco-prompts.md` is the fu
 
 Each prompt carries, in order: the view, the expression written as body language, the identity text
 (introduced by "the dog in the attached reference photos, reproduced exactly"), the details to keep
-exactly, full-body framing with space around it, the plain contrasting backdrop with soft even light
+exactly, the identity lock (people: "do not beautify, smooth, slim, age or restyle the face"; animals:
+"do not turn it into a generic dog of its breed"), the framing, the plain contrasting backdrop with soft even light
 and a gentle rim light, camera at eye level with an 85mm lens, and "photorealistic, tack sharp,
 colours true to the reference; only this one dog, no text, no props".
 

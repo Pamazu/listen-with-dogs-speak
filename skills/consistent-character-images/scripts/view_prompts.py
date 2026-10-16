@@ -62,6 +62,25 @@ BACKDROPS = {
 }
 DETAIL = {"animal": "fur", "person": "skin, hair and fabric", "object": "surface and material"}
 
+# How much of the subject each view shows. A person's face is too small to judge at full body, so
+# people default to waist-up; the `face` view is always a close-up.
+FRAMING = {
+    "full_body": "Full body, the whole {s} inside the frame with clear space around it",
+    "waist_up": "Framed from the waist up, the head and shoulders well inside the frame with space above the head",
+    "head_shoulders": "Framed head and shoulders, the whole head inside the frame with space above it",
+}
+DEFAULT_FRAMING = {"animal": "full_body", "person": "waist_up", "object": "full_body"}
+
+# The identity lock: what a model must not "improve". Earned from the Higgsfield thumbnail skill's
+# IDENTITY LOCK (people) and the Coco test (animals).
+LOCK = {
+    "person": "Do not beautify, smooth, slim, age or restyle the face: the same bone structure, eye shape, nose, "
+              "lips, jawline, skin tone and texture, hairline and hair texture as the reference.",
+    "animal": "Do not turn it into a generic or average {s} of its breed: the same head shape, markings and "
+              "proportions as the reference.",
+    "object": "The same shape, proportions, colours and printed marks as the reference.",
+}
+
 
 def errors(c):
     e = []
@@ -74,6 +93,8 @@ def errors(c):
         e.append("an animal needs 'species' (dog, cat ...)")
     if c.get("tone") not in BACKDROPS:
         e.append("tone must be light, mid or dark (the subject's main colour), to pick a contrasting backdrop")
+    if c.get("framing") and c["framing"] not in FRAMING:
+        e.append(f"framing must be one of {', '.join(FRAMING)}")
     for v in c.get("views", []):
         if v not in VIEWS:
             e.append(f"unknown view '{v}' (known: {', '.join(VIEWS)})")
@@ -90,7 +111,8 @@ def prompt(c, view, expr, anchor):
     name = c["name"]
     refs = c.get("references") or []
     if refs:
-        source = f"The {s} in the attached reference photos, reproduced exactly as it looks there, every detail the same: "
+        looks = "as they look there" if kind == "person" else "as it looks there"
+        source = f"The {s} in the attached reference photos, reproduced exactly {looks}, every detail the same: "
     elif anchor:
         source = ""
     else:
@@ -105,8 +127,10 @@ def prompt(c, view, expr, anchor):
     lines.append(source + c["identity"].strip())
     if c.get("drift"):
         lines.append(f"Keep exactly: {c['drift']}.")
+    lines.append(LOCK[kind].format(s=s))
+    framing = c.get("framing") or DEFAULT_FRAMING[kind]
     frame = ("Close-up framing with the whole head inside the frame" if view == "face"
-             else f"Full body, the whole {s} inside the frame with clear space around it")
+             else FRAMING[framing].format(s=s))
     lines.append(f"{frame}, on {BACKDROPS[c['tone']]}: plain, evenly lit, no texture, objects or gradients. "
                  f"Soft even studio light with a gentle rim light, so the {s} stands out with strong, clean contrast "
                  f"against the background. Camera at the {s}'s eye level, 85mm lens, no distortion.")
