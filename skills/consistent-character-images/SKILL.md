@@ -182,6 +182,12 @@ fence, house and steps in different places, because the prompt only described wh
    the right fence starts from its own post 0.15 m in front of it", never "the fences meet at the corner". A joint the
    map does not describe is redrawn differently in every later view. When a distance is read off a photo with no
    ruler, say it is a reading (e.g. "about one post-width"), and draw it into the plan the same way.
+   **Speak in the frame, not in metres (J, 19 Oct: "Everything should be exact, precise, and clean").** A model
+   cannot see a grid: the 13:13 top-down put the far fence into one shared corner post and the tree's crown on the
+   fence although the map gave both in metres. For a view whose layout matters (a plan, a set-up shot), draw that
+   exact frame as clean flat shapes with no labels (a script, from the grid) and attach it as the LAYOUT, then write
+   each object's place as a percentage of the frame ("crown from 60% to 83% across, lowest edge at 16% down; fence at
+   42% down") and each joint in the frame's terms ("two posts side by side, never one shared post").
 2. **One prompt per view**, each opening with where the camera stands and what that puts on the left, centre and
    right of the frame, then the full map. Make the first view with no place reference (style photos only); make
    every other view with the first attached FIRST.
