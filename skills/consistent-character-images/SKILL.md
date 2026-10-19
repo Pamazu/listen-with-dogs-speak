@@ -215,6 +215,32 @@ fence, house and steps in different places, because the prompt only described wh
 6. **Props** (a ball, a hand, a cup): a short description with size, colour and which hand or side, and an image only
    when a draft gets it wrong.
 
+## 3c. The precision standard for ANY cast member (J-ruled 2026-10-19)
+
+J: "Update the skill so that it is as accurate and precise as we need, really capturing the detail required for any
+type of element or cast member we generate at that level of precision." This applies to a person, an animal, a prop,
+an invented character and a place alike:
+
+1. **Twin test first**: the first image's prompt runs twice and the two must match; every difference is a gap in the
+   description, filled before going on.
+2. **Every part sized, placed, built and related**: size in real units, position relative to named neighbours, how
+   it is built or attached, how many, and what is NOT there.
+3. **Every joint read from the chosen image**: zoom into each edge, corner and meeting point of the approved image
+   and write it down with distances (a reading off a photo is marked as a reading).
+4. **Fixed features once, never contradicted**; nothing unwanted named (section 3).
+5. **A vector map of where everything goes**: draw the subject or place as clean flat shapes from the same numbers,
+   by script (`plan.py`/`layout.py` in the Listen When Dogs Speak yard are worked examples): a labelled plan for people,
+   and a label-free layout in the exact frame of each important view for the model, with every position also written
+   as a percentage of the frame.
+6. **A 3D base when 2D is not enough**: build the subject or place as a simple 3D scene in **Mixar** (StoryMind's
+   Blender-based 3D app, reachable by agents through the StoryMind `mixar` MCP connection: scenes, objects, cameras,
+   renders). Render each reference view from that scene as a base image, and keep the scene as the single source for
+   placement and for camera moves, so image references and video shots share one geometry. UNTESTED for this use:
+   the first project to try it records what worked here.
+7. **Not done until it holds**: a view that disagrees with the map is regenerated, never kept; when time runs out,
+   say what is still off (e.g. the Listen When Dogs Speak Yard 2 still joins the far fence at one shared post,
+   parked by J on 2026-10-19), never call it done.
+
 ## 4. Run them
 
 - Same model and settings for the whole set (1:1 or 16:9, 2k). Attach the reference photos (or the
