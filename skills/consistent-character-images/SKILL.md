@@ -172,7 +172,9 @@ fence, house and steps in different places, because the prompt only described wh
    every view as "where things are", while the chosen first view stays "how things look". On 2026-10-19 a top-down
    view ran the house past the fence corners and put a tree that stands 9 m outside onto the corner, because the map
    had edges but no ends and "behind the corner" but no distance. Give each later camera as a grid point and a
-   direction, not "from the corner".
+   direction, not "from the corner". A building gets its whole footprint and which of its faces lie on the place's boundary
+   lines, never only "its wall is the left edge": on 2026-10-19 that left the house free to run past the fence, and
+   a camera standing level with the house's front face saw that face. Put corner cameras just INSIDE the boundary.
 2. **One prompt per view**, each opening with where the camera stands and what that puts on the left, centre and
    right of the frame, then the full map. Make the first view with no place reference (style photos only); make
    every other view with the first attached FIRST.
