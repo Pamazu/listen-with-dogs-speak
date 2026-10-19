@@ -37,6 +37,13 @@ Chat with J in his language; write every generation prompt in English unless ask
 2. **Lock identity** for each character (section 3) before writing any shot: make each character's view and
    expression images with `consistent-character-images` and attach the ones each shot needs as the clip's
    references.
+   **Every correction travels with the character (J-approved 2026-10-20: "This learning is important").** A fixed
+   feature J corrected in images (a tail's carriage and size, height, markings) is written into the cast file and the
+   platform element (e.g. Dreamina's @Coco) FIRST, in the same turn. Then grep every scene prompt, stage line and
+   pasted script direction for that feature and rewrite anything that contradicts it. A script's acting notes never
+   override an approved correction. Coco, 20 Oct: Tammy's script said "tail rising" and "tail straight up", and the
+   element said "still and straight up when alert"; copied into the scene prompts after J had fixed the tail in the
+   images, they raised her tail in every clip.
 3. **Write the spec.** Shots contiguous, each with its camera, who is in frame, `BACKGROUND`, timed
    action and lines.
 4. **Check, then render** with `clip_spec.py`. Fix every error it prints.

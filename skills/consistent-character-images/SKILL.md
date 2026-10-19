@@ -305,7 +305,9 @@ features. Example: `Business & Career/projects/build-listen-when-dogs-speak/refe
 When the video platform has a cast feature (Dreamina **elements**, a Higgsfield character, StoryStudio cast members),
 load the images and the cast file into it once, and call the character by name in every video prompt; the scene
 prompt then never restates its look or movement (J, 19 Oct: "the scene prompts should not describe anything about
-how Coco looks"). Without one, paste the cast file unchanged at the top of each prompt.
+how Coco looks"). Without one, paste the cast file unchanged at the top of each prompt. **The cast file and the element are the ONE place a fixed feature lives** (J-approved 2026-10-20): update both in
+the same turn as any correction, never only the prompt that showed the error, then reconcile every prompt and every
+pasted script line with them (see `timed-video-prompts` §1 step 2).
 
 ## 7. Trained identities (optional)
 
