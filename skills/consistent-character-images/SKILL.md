@@ -175,6 +175,13 @@ fence, house and steps in different places, because the prompt only described wh
    direction, not "from the corner". A building gets its whole footprint and which of its faces lie on the place's boundary
    lines, never only "its wall is the left edge": on 2026-10-19 that left the house free to run past the fence, and
    a camera standing level with the house's front face saw that face. Put corner cameras just INSIDE the boundary.
+   **THE DETAIL STANDARD (J, 19 Oct: "This is the level of detail that I expect for the skill to always hold you
+   accountable, no less").** Once an image is chosen as the look, zoom into every joint and edge of it (each corner of
+   a fence, where a fence meets a wall, where a roof ends, how steps meet a deck) and write each one into the map as it
+   IS in that image, with distances: "the back fence runs 0.3 m past the right fence's line and ends in its own post;
+   the right fence starts from its own post 0.15 m in front of it", never "the fences meet at the corner". A joint the
+   map does not describe is redrawn differently in every later view. When a distance is read off a photo with no
+   ruler, say it is a reading (e.g. "about one post-width"), and draw it into the plan the same way.
 2. **One prompt per view**, each opening with where the camera stands and what that puts on the left, centre and
    right of the frame, then the full map. Make the first view with no place reference (style photos only); make
    every other view with the first attached FIRST.
