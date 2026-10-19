@@ -159,6 +159,11 @@ fence, house and steps in different places, because the prompt only described wh
    would otherwise be invented: neighbour houses, paths, flower beds, furniture, windows. On 2026-10-19 two runs of
    one yard prompt disagreed on every object that had no size, place or relation: steps against the wall vs
    free-standing with no door, different trees, neighbour houses in one and not the other.
+   **Describe structures by how they are built, and place them where a builder would (J, 19 Oct).** "A deck with
+   steps" came out as a slab in one run and a table on legs with side steps in the other: say what its sides are
+   closed with, which way the boards run, how many steps, their height and depth, and whether they run its full
+   length. And check the plan makes sense as architecture: a back door belongs in the middle of a wall with the deck
+   centred on it, not squeezed into the corner by the fence; a model draws an odd plan faithfully and it looks wrong.
 2. **One prompt per view**, each opening with where the camera stands and what that puts on the left, centre and
    right of the frame, then the full map. Make the first view with no place reference (style photos only); make
    every other view with the first attached FIRST.
