@@ -171,6 +171,10 @@ fence, house and steps in different places, because the prompt only described wh
    light only.
 4. **The angle of a video shot lives in the video prompt**, not in the place images: the images only need to show the
    place clearly and consistently, in any aspect.
+   **Text AND picture for every later view (J, 19 Oct: "apart from being extremely specific with the text, we'll
+   also show the reference so that the other angles are extremely consistent").** Once the first view passes the twin
+   test, pick one of the twins; every other view attaches it FIRST, keeps the full map text, and says the image wins
+   over the text on any detail (a window's panes, a door's panels), because those are what the text still leaves open.
 5. **The twin test (J, 19 Oct):** run the first view's prompt TWICE. If the two images show the same place, the
    prompt is exact enough; every difference between them is a gap in the map: write what was missing into the map,
    then run the twin test again. Never go on to the other views until the twins match. The same test works for a
