@@ -171,10 +171,17 @@ fence, house and steps in different places, because the prompt only described wh
    light only.
 4. **The angle of a video shot lives in the video prompt**, not in the place images: the images only need to show the
    place clearly and consistently, in any aspect.
+   **A place gets a 360 set, not one angle (J, 19 Oct).** Scenes move the camera, so the references must cover every
+   direction: the first view, then a straight-down plan (every object and its relation to everything), then views
+   from the opposite corner, from inside the place looking out, and square-on to the main structure. Close the place
+   on all sides (a fence, a wall) so every direction has something fixed to show. **Never write "copy the image" for
+   a later view:** a model then copies the picture and ignores the new camera (19 Oct: a "straight-on" view came out
+   as a twin of view 1). Say the reference sets only how things LOOK, never its camera, and add a "THIS FRAME MUST
+   SHOW (unlike view 1)" line naming what is newly visible.
    **Text AND picture for every later view (J, 19 Oct: "apart from being extremely specific with the text, we'll
    also show the reference so that the other angles are extremely consistent").** Once the first view passes the twin
    test, pick one of the twins; every other view attaches it FIRST, keeps the full map text, and says the image wins
-   over the text on any detail (a window's panes, a door's panels), because those are what the text still leaves open.
+   over the text on how any detail looks (a window's panes, a door's panels), never on where the camera stands.
 5. **The twin test (J, 19 Oct):** run the first view's prompt TWICE. If the two images show the same place, the
    prompt is exact enough; every difference between them is a gap in the map: write what was missing into the map,
    then run the twin test again. Never go on to the other views until the twins match. The same test works for a
