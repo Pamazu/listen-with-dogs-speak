@@ -152,6 +152,13 @@ fence, house and steps in different places, because the prompt only described wh
    sizes ("lawn 10 x 7 m; LEFT edge the house wall; BACK-LEFT corner the yellow steps; fence along the BACK and down
    the RIGHT; one big tree behind the back-right corner; FRONT open"). The map goes word for word into every image
    prompt of the place and every video prompt set there.
+   **Leave nothing to guess (J, 19 Oct: "You need to be very specific ... not to leave questions or space for
+   assumptions").** For every object write: its size in metres, its exact position (which edge, how far from what),
+   what it is attached to or in front of and why it is there (steps lead to a DOOR, so the door is in the map), its
+   material and colour, and how many there are ("exactly one tree", "two openings"). Then write what is NOT there and
+   would otherwise be invented: neighbour houses, paths, flower beds, furniture, windows. On 2026-10-19 two runs of
+   one yard prompt disagreed on every object that had no size, place or relation: steps against the wall vs
+   free-standing with no door, different trees, neighbour houses in one and not the other.
 2. **One prompt per view**, each opening with where the camera stands and what that puts on the left, centre and
    right of the frame, then the full map. Make the first view with no place reference (style photos only); make
    every other view with the first attached FIRST.
@@ -159,6 +166,10 @@ fence, house and steps in different places, because the prompt only described wh
    light only.
 4. **The angle of a video shot lives in the video prompt**, not in the place images: the images only need to show the
    place clearly and consistently, in any aspect.
+5. **The twin test (J, 19 Oct):** run the first view's prompt TWICE. If the two images show the same place, the
+   prompt is exact enough; every difference between them is a gap in the map: write what was missing into the map,
+   then run the twin test again. Never go on to the other views until the twins match. The same test works for a
+   character's first image.
 5. **Check every view against the map** (each object on its edge) before keeping it; one view that disagrees is
    regenerated, never kept.
 6. **Props** (a ball, a hand, a cup): a short description with size, colour and which hand or side, and an image only
