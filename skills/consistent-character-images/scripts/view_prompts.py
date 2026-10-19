@@ -41,7 +41,9 @@ EXPRESSIONS = {
     },
     "person": {
         "neutral": "Neutral: relaxed face, mouth closed, calm open eyes",
-        "happy": "Happy: a genuine smile reaching the eyes, cheeks lifted",
+        # Never "cheeks lifted" here: a model then draws round apple cheeks and a full grin, which was J's
+        # own complaint on 18 Oct. How THIS person smiles comes from the character file's `smile`.
+        "happy": "Happy: a genuine smile, in this person's own way of smiling as in the reference photos",
         "sad": "Sad: brows drawn up in the middle, mouth corners down, eyes lowered",
         "angry": "Angry: brows pulled down and together, lips pressed tight, hard stare",
         "surprised": "Surprised: eyebrows raised high, eyes wide, mouth open",
@@ -74,9 +76,15 @@ DEFAULT_FRAMING = {"animal": "full_body", "person": "waist_up", "object": "full_
 # The identity lock: what a model must not "improve". Earned from the Higgsfield thumbnail skill's
 # IDENTITY LOCK (people) and the Coco test (animals).
 LOCK = {
-    "person": "Do not beautify, smooth, slim, age or restyle the face: the same bone structure, eye shape, nose, "
-              "lips, jawline, skin tone and texture, hairline and hair texture as the reference.",
-    "animal": "Do not turn it into a generic or average {s} of its breed: the same head shape, markings and "
+    # Video-Editor 1's read of round 6 (18 Oct): every picture separated the brows, narrowed and
+    # rejuvenated the face and retouched the skin, and the face-embedding gate saw none of it.
+    "person": "Do not beautify, smooth, slim, narrow, de-age or restyle the face: the same bone structure and face "
+              "width, eye shape, nose, lips, jawline, the eyebrows' exact shape, thickness and the gap between them, "
+              "the real skin tone and texture with its natural unevenness (no retouching), hairline and hair texture "
+              "as the reference.",
+    # Naming a breed pulls in that breed's typical anatomy (Coco, 18 Oct: dewclaws and a long tail came back
+    # in every image while the prompt said "of its breed"); describe the body, never the breed.
+    "animal": "Do not beautify, average or restyle it: the same head shape, markings, size and "
               "proportions as the reference.",
     "object": "The same shape, proportions, colours and printed marks as the reference.",
 }
@@ -102,7 +110,19 @@ def errors(c):
     for x in c.get("expressions", []):
         if x not in EXPRESSIONS[kind] and not isinstance(c.get("custom_expressions", {}).get(x), str):
             e.append(f"unknown expression '{x}': add it to custom_expressions with its body-language description")
+    for k in ("glasses", "smile", "hair"):
+        if k in c and (not isinstance(c[k], str) or not c[k].strip()):
+            e.append(f"'{k}' must be a non-empty description")
+    if c.get("glasses") == "none" and "glasses" in (c.get("identity", "") + " " + c.get("drift", "")).lower():
+        e.append("'glasses' is none but identity or drift still mentions glasses: say it once, in 'glasses'")
+    for x in c.get("held_expressions", []):
+        if x not in c.get("expressions", []):
+            e.append(f"held expression '{x}' is not in expressions")
     return e
+
+
+# Expressions where the mouth shows how this person smiles, so the character file's `smile` goes in.
+SMILING = {"happy", "excited", "curious", "laughing"}
 
 
 def prompt(c, view, expr, anchor):
@@ -121,10 +141,26 @@ def prompt(c, view, expr, anchor):
     if expr:
         table = {**EXPRESSIONS.get(kind, {}), **c.get("custom_expressions", {})}
         text = table[expr]
+        # A fixed carriage (e.g. a tail that always hangs) wins over the mood table's generic tail
+        # (Coco, 18 Oct: "tail up mid-wag" made her tail curve up while the identity said it hangs).
+        if c.get("tail_carriage") and kind == "animal":
+            import re as _re
+            text = _re.sub(r",?\s*tail[^,;]*", "", text).rstrip(", ")
+            text += f"; tail as always: {c['tail_carriage'].strip().rstrip('.')}"
         if view == "back" and kind == "animal":
             text += "; seen from behind, the mood shows in the ears, tail and posture"
         lines.append(text + ".")
+        if c.get("smile") and expr in SMILING:
+            lines.append(f"Smile exactly the way this person smiles: {c['smile'].strip().rstrip('.')}.")
     lines.append(source + c["identity"].strip())
+    if c.get("hair"):
+        # The cut the person chose can differ from their photos (J, 18 Oct: "I don't have a clean hair cut now").
+        lines.append(f"Hair: {c['hair'].strip().rstrip('.')}; this haircut wins over the hair length and style in the "
+                     f"reference photos, which set only the hair colour, texture and hairline.")
+    if c.get("glasses") == "none":
+        lines.append("No glasses: no frames or eyewear of any kind.")
+    elif c.get("glasses"):
+        lines.append(f"Glasses: {c['glasses'].strip().rstrip('.')}.")
     if c.get("drift"):
         lines.append(f"Keep exactly: {c['drift']}.")
     lines.append(LOCK[kind].format(s=s))
@@ -143,6 +179,8 @@ def prompt(c, view, expr, anchor):
 def build(c):
     views = c.get("views") or DEFAULT_VIEWS
     exprs = [] if c["kind"] == "object" else (c.get("expressions") or DEFAULT_EXPRESSIONS)
+    # An expression no real photo shows (J has no photo laughing) is a guess the likeness gate cannot check: held.
+    exprs = [x for x in exprs if x not in c.get("held_expressions", [])]
     base = "neutral" if "neutral" in exprs else None
     imaginary = not c.get("references")
     out = []
@@ -169,12 +207,15 @@ def main():
     if errs:
         return 1
     items = build(c)
+    held = c.get("held_expressions", [])
     if a.json:
-        json.dump({"character": c["name"], "prompts": items}, sys.stdout, indent=2, ensure_ascii=False)
+        json.dump({"character": c["name"], "prompts": items, "held": held}, sys.stdout, indent=2, ensure_ascii=False)
         print()
         return 0
     imaginary = not c.get("references")
     print(f"# {c['name']}: {len(items)} view prompts\n")
+    if held:
+        print(f"Held until a real photo shows it: {', '.join(held)}.\n")
     print("Attach the reference photos to every prompt." if not imaginary else
           f"Imaginary character: generate prompt 1 first, approve it, then attach it to every other prompt.")
     print("Use the same model and settings for all of them (16:9 or 1:1, 2k).\n")

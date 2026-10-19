@@ -28,6 +28,7 @@ Each row says where the fact came from and when. Prices move; re-check before a 
   pass as the picture, in 8+ languages; OmniHuman 1.5 animates a presenter to an uploaded voice or
   song; every paid plan lists "lip sync audio generations" (J's plan screenshot, 2026-10-13). Whether
   OmniHuman handles animal faces is UNTESTED.
+- **Elements (= cast members):** Dreamina saves a character as an *element* with its images, description and movement text, and a prompt calls it with @<name> (J, 2026-10-19: "dreamina already has this in their elements (how they call cast member)"). With an element, a prompt never restates the character's look or movement.
 - **References:** an @ picker in the prompt box labels uploaded images, videos and audio itself. Map
   spec handles to those labels when pasting; check the labels in the live UI before the first run.
 - **Price (J's screenshot, 2026-10-13, monthly billing):** Basic €8 then €13.99 (no Seedance);
