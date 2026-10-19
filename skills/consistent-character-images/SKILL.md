@@ -164,6 +164,15 @@ fence, house and steps in different places, because the prompt only described wh
    closed with, which way the boards run, how many steps, their height and depth, and whether they run its full
    length. And check the plan makes sense as architecture: a back door belongs in the middle of a wall with the deck
    centred on it, not squeezed into the corner by the fence; a model draws an odd plan faithfully and it looks wrong.
+   **Put the place on one measured grid, and draw it (J, 19 Oct: "be very precise with angles, where everything is
+   placed").** Pick an origin corner and axes, then give every object coordinates: where each wall and fence STARTS
+   and ENDS, where corners meet (and that they meet AT a post, no gap, no overlap), where a building ends, and how far
+   outside the place each outside object stands (a tree's trunk position AND its crown radius, so its nearest edge is
+   known). Then draw that grid as a simple plan image from the same numbers (a script, never by hand) and attach it to
+   every view as "where things are", while the chosen first view stays "how things look". On 2026-10-19 a top-down
+   view ran the house past the fence corners and put a tree that stands 9 m outside onto the corner, because the map
+   had edges but no ends and "behind the corner" but no distance. Give each later camera as a grid point and a
+   direction, not "from the corner".
 2. **One prompt per view**, each opening with where the camera stands and what that puts on the left, centre and
    right of the frame, then the full map. Make the first view with no place reference (style photos only); make
    every other view with the first attached FIRST.
