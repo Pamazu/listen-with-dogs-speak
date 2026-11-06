@@ -1,0 +1,18 @@
+{
+  "app": "listen-with-dogs-speak",
+  "version": 1,
+  "_why": "StorySafe declaration (a61f15f0). Only the routes block is here so far: StorySafe drafted it from the code for the owner to confirm. Data kinds are not declared yet.",
+  "routes": {
+    "code": [
+      "."
+    ],
+    "note": "Drafted by StorySafe from the code at 44bf4da971ac: every route handler found in .. Each \"draft\" note says the line of code a suggestion rests on.",
+    "draft": {
+      "by": "StorySafe routes draft (a61f15f0)",
+      "sha": "44bf4da971ac7bc95c2e3dca5b681a7cf982b65b",
+      "at": "2026-11-06T19:29:35.131Z",
+      "confirm": "The app's owner confirms: set every \"unsure\" to public (with its why), owner, members or admin; correct any suggestion; then delete this \"draft\" key. Until then the route check reports the list as a draft."
+    },
+    "list": []
+  }
+}
